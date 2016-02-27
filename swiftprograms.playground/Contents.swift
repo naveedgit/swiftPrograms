@@ -112,14 +112,12 @@ assert(gcd(-9,0)==9)
 func indexOf(arr:[Int],_ num:Int)->Int?
 {
     assert(arr != [])
-    var index=0
-    for n in arr
+    for n in 0..<arr.count
     {
-        if n==num
+        if arr[n]==num
         {
-            return index
+            return n
         }
-        index++
     }
     return nil
 }
@@ -127,6 +125,7 @@ func indexOf(arr:[Int],_ num:Int)->Int?
 assert(indexOf([1,2,3,4,5,6],1)==0)
 assert(indexOf([1,2,3,4,5,6],6)==5)
 assert(indexOf([1,2,3,4,5,6],3)==2)
+assert(indexOf([1,7,6,4],0)==nil)
 
 
 
